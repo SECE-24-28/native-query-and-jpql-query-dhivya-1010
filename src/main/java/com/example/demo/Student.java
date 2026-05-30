@@ -14,20 +14,23 @@ public class Student {
 //    Pen p;
 
 
-    //-> CONSTRUCTOR INJECTION
- //   Pen p;
+//    //-> CONSTRUCTOR INJECTION
+//    Pen p;
 //    @Autowired
 //    public Student(Pen p){
 //        this.p=p;
 //    }
 
     //-> SETTER INJECTION
-    Pen p;
+//    Pen p;
+//
+//    @Autowired
+//    public void setP(Pen p) {
+//        this.p = p;
+//    }
 
     @Autowired
-    public void setP(Pen p) {
-        this.p = p;
-    }
+    Writer w;
 
     public void setAge(int age) {
         this.age = age;
@@ -43,6 +46,6 @@ public class Student {
 
 
     public void writeExam(){
-        p.write();
+        w.write();
     }
 }
