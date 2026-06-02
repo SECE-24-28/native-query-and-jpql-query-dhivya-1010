@@ -36,4 +36,9 @@ public class StudentService4 {
         sr4.deleteById(rno);
         return "deleted successfully";
     }
+
+    public String deleteAllStud4() {
+        sr4.deleteAll();
+        return "everything deleted";
+    }
 }

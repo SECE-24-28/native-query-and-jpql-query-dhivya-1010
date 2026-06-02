@@ -37,4 +37,8 @@ public class StudentController4 {
     public String deleteStud4(@PathVariable("rno") int rno){
         return s4.deleteStud4(rno);
     }
+    @DeleteMapping("student4")
+    public String deleteAllStud4(){
+        return s4.deleteAllStud4();
+    }
 }
