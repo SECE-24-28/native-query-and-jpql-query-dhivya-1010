@@ -48,4 +48,9 @@ public class StudentController4 {
     public List<Student4> getCustomStud4(@Param("gender") String gender, @Param("tech") String tech){
         return s4.getCustomStud4(gender,tech);
     }
+
+    @GetMapping("getByTech/{tech}")
+    public List<Student4> getByTech(@PathVariable("tech") String tech){
+        return s4.getByTech(tech);
+    }
 }

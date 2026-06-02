@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface StudentRepo4 extends JpaRepository<Student4,Integer> {
     List<Student4> findByGenderAndTech(String gender, String tech);
+    List<Student4> findByTech(String tech);
 }

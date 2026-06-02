@@ -45,4 +45,8 @@ public class StudentService4 {
     public List<Student4> getCustomStud4(String gender,String tech) {
         return sr4.findByGenderAndTech(gender, tech);
     }
+
+    public List<Student4> getByTech(String tech) {
+        return sr4.findByTech(tech);
+    }
 }
