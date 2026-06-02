@@ -53,4 +53,20 @@ public class StudentController4 {
     public List<Student4> getByTech(@PathVariable("tech") String tech){
         return s4.getByTech(tech);
     }
+
+    /*
+QUERY - native query and jpql query
+
+    -> native query - in tables, (field)
+    -> JPQL (Java Persistent Query Language) - in entity/object  (column - particular)
+ */
+
+    //1. NATIVE QUERY
+    @GetMapping("student4/filter")
+    public List<Student4> getStudentByNameAndGen(@Param("gender") String gender, @Param("tech") String tech){
+        return s4.getStudentByGenAndTech(gender,tech);
+    }
+
+
 }
+

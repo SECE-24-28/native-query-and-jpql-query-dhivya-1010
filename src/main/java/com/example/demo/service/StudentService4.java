@@ -49,4 +49,8 @@ public class StudentService4 {
     public List<Student4> getByTech(String tech) {
         return sr4.findByTech(tech);
     }
+
+    public List<Student4> getStudentByGenAndTech(String gender, String tech) {
+        return sr4.findByGenAndTech(gender, tech);
+    }
 }
