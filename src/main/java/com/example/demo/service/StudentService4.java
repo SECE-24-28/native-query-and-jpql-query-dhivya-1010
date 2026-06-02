@@ -1,0 +1,39 @@
+package com.example.demo.service;
+
+import com.example.demo.model.Student4;
+import com.example.demo.repository.StudentRepo4;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class StudentService4 {
+    @Autowired
+    StudentRepo4 sr4;
+    public List<Student4> getStudent4() {
+
+        return sr4.findAll();
+    }
+
+    public String addStud4(Student4 std4) {
+        sr4.save(std4);
+        return "added successfully";
+    }
+
+    public Student4 getStud4ByNo(int rno) {
+
+        return sr4.findById(rno).orElse(new Student4());
+    }
+
+    public String updateStud4(Student4 std4) {
+
+        sr4.save(std4);   //save will work for both post and put
+        return "updated successfully";
+    }
+
+    public String deleteStud4(int rno) {
+        sr4.deleteById(rno);
+        return "deleted successfully";
+    }
+}
